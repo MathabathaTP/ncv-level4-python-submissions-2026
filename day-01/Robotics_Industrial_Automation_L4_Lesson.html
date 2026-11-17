@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Programming Chapter | Robotics & Industrial Automation NC(V) L4</title>
+<style>
+:root{--navy:#1b2a41;--blue:#005596;--gold:#fdb515;--green:#1e8e3e;--red:#c3092b;--purple:#6b3fc9;--bg:#f5f7fb;--line:#d5dde6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:17px/1.5 "Segoe UI",Arial,sans-serif;color:#202b38}
+header{position:sticky;top:0;z-index:5;background:var(--navy);color:white;padding:.65rem 1rem;display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}
+header strong{color:var(--gold)}nav{display:flex;gap:.35rem;flex-wrap:wrap;flex:1}
+button{cursor:pointer;font:inherit;border:0;border-radius:8px;padding:.45rem .75rem;background:var(--blue);color:white}
+nav button{font-size:.78rem;background:#31445f}nav button.active{background:var(--gold);color:#1b2a41;font-weight:700}
+button.alt{background:white;border:1px solid var(--blue);color:var(--blue)}button.good{background:var(--green)}
+button:disabled{opacity:.45;cursor:default}main{max-width:1120px;margin:auto;padding:1.2rem 1rem 5rem}
+section{display:none}section.active{display:block}h1{color:var(--blue);margin:.2rem 0}h2{font-size:1.2rem;color:var(--blue);margin:.2rem 0 .6rem}
+.kicker{font-size:1.08rem;color:#596779}.card{background:white;border:1px solid var(--line);border-radius:13px;padding:1rem;margin:1rem 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.challenge{border:2px dashed var(--red)}.teach{border-left:6px solid var(--purple);background:#f8f5ff}
+.key{border-left:5px solid var(--gold);background:#fff8e5;padding:.65rem;margin:.65rem 0;border-radius:8px}
+pre{overflow:auto;background:#142336;color:#e8f2ff;border-radius:9px;padding:.85rem;font:14px/1.55 Consolas,monospace;white-space:pre-wrap}
+code{font-family:Consolas,monospace;background:#edf3fa;padding:0 .2rem;border-radius:3px}
+label{display:block;margin:.5rem 0}input,select,textarea{font:inherit;padding:.4rem;border:1px solid #9eafc0;border-radius:7px;max-width:100%}
+textarea{width:100%;min-height:90px}.feedback{font-weight:650;margin:.5rem 0;color:var(--blue)}
+.row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}.pill{display:inline-block;background:var(--blue);color:white;border-radius:99px;padding:.15rem .6rem;font-size:.8rem}
+.light{background:#edf4fb;border-radius:10px;padding:.8rem}.output{background:#102235;color:#b6ffd0;padding:.7rem;border-radius:8px;white-space:pre-wrap;font:14px Consolas,monospace;min-height:50px}
+.lamp{display:inline-block;width:48px;height:48px;border-radius:50%;background:#b5bdc7;border:3px solid #798392;vertical-align:middle}
+.lamp.on{background:#ffe02b;box-shadow:0 0 24px #ffce00}
+footer{display:flex;justify-content:space-between;gap:.5rem;margin-top:1rem}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid var(--line);padding:.45rem;text-align:left}th{background:#edf3fa}
+#progress{height:5px;background:#dce6f0}#bar{height:100%;width:12.5%;background:var(--gold);transition:width .2s}
+@media print{header,footer,#progress{display:none}section{display:block!important;page-break-after:always}}
+</style></head><body>
+<header><strong>🤖 Robotics & Industrial Automation · NC(V) L4</strong><nav id="nav"></nav><button class="alt" id="printBtn">🖨 Print</button></header><div id="progress"><div id="bar"></div></div>
+<main>
+<section data-title="Introduction"><span class="pill">Part 1 of 8</span><h1>💻 Programming an Industrial Robot</h1>
+<p class="kicker">Chapter focus: write, trace, test and debug Arduino-style C++ programs for a simulated automated conveyor.</p>
+<div class="grid"><div class="card"><h2>Learning outcomes</h2><ol><li>Explain algorithms, variables, constants and data types.</li><li>Use input, output, selection and repetition in C++.</li><li>Write functions for a robot controller.</li><li>Test and debug a sensor-based sorting program.</li><li>Apply safe programming principles.</li></ol>
+<div class="key"><b>Important:</b> This is a browser-based teaching simulation. It demonstrates programming logic; it does not connect to or control physical industrial equipment.</div></div>
+<div class="card challenge"><h2>🎯 Starter challenge</h2><p>A conveyor detects a box. A sensor returns <code>HIGH</code> when a box is present. What should the program do next?</p><label><input type="radio" name="hook" value="0"> Keep the motor running without checking</label><label><input type="radio" name="hook" value="1"> Check the sensor and decide whether to activate the sorter</label><label><input type="radio" name="hook" value="2"> Ignore the sensor</label><button onclick="checkRadio('hook','1','hookFb')">Check answer</button><div class="feedback" id="hookFb"></div></div></div>
+<div class="card teach"><h2>🍎 Lecturer technique: Predict → Run → Explain</h2>Ask learners to describe what the robot should do before showing code. Use a physical box and a paper sensor card to act out the logic.</div></section>
+
+<section data-title="Algorithm & IPO"><span class="pill">Part 2 of 8</span><h1>🧩 Algorithms and IPO</h1><p class="kicker">Plan the robot's behaviour before programming.</p>
+<div class="card"><h2>Industrial sorting task</h2><p>When a box is detected, the controller checks its type. If the type is metal, activate the sorting arm. Otherwise, let the box continue. If an emergency stop is active, stop all movement.</p>
+<table><tr><th>Input</th><th>Processing</th><th>Output</th></tr><tr><td>Box detected, metal detected, emergency stop</td><td>Check safety, then evaluate box type</td><td>Motor ON/OFF; sorting arm ON/OFF</td></tr></table></div>
+<div class="grid"><div class="card"><h2>Pseudocode</h2><pre>READ emergencyStop
+IF emergencyStop THEN
+    STOP motor
+    DEACTIVATE arm
+ELSE
+    RUN motor
+    IF boxDetected AND metalDetected THEN
+        ACTIVATE arm
+    ELSE
+        DEACTIVATE arm
+    ENDIF
+ENDIF</pre></div><div class="card challenge"><h2>Sort each item</h2><div id="ipoGame"></div><button onclick="checkIPO()">Check IPO</button><div class="feedback" id="ipoFb"></div></div></div>
+<div class="card teach"><h2>🍎 Lecturer technique: Keyboards closed</h2>Let groups draw a flowchart or IPO chart. Ask them to identify the safety rule before writing any C++.</div></section>
+
+<section data-title="C++ Basics"><span class="pill">Part 3 of 8</span><h1>🔤 C++ Programming Fundamentals</h1>
+<div class="grid"><div class="card"><h2>Arduino program structure</h2><pre>const int sensorPin = 2;
+const int ledPin = 13;
+bool boxDetected = false;
+
+void setup() {
+  pinMode(sensorPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  boxDetected = digitalRead(sensorPin);
+  digitalWrite(ledPin,
+               boxDetected ? HIGH : LOW);
+}</pre><p><code>setup()</code> runs once; <code>loop()</code> repeats. <code>const</code> declares a value that cannot be reassigned.</p></div>
+<div class="card challenge"><h2>Quick code quiz</h2><p>Which type is most suitable for a true/false sensor state?</p><label><input type="radio" name="type" value="int"> int</label><label><input type="radio" name="type" value="bool"> bool</label><label><input type="radio" name="type" value="char"> char</label><button onclick="checkRadio('type','bool','typeFb')">Check</button><div class="feedback" id="typeFb"></div><h2>Find the syntax error</h2><pre>int motorPin = 9
+void setup() {
+  pinMode(motorPin, OUTPUT);
+}</pre><p>What is missing?</p><input id="syntaxAns" placeholder="Your answer"><button onclick="checkSyntax()">Check</button><div class="feedback" id="syntaxFb"></div></div></div>
+<div class="card teach"><h2>🍎 Lecturer technique: Trace each line</h2>Point to the variable declaration, pin setup, sensor reading and output instruction. Learners predict which statements execute once and which repeat.</div></section>
+
+<section data-title="Selection"><span class="pill">Part 4 of 8</span><h1>🔀 Decisions with if / else</h1><p class="kicker">A robot makes decisions using Boolean conditions.</p>
+<div class="card"><h2>Safety-first control</h2><pre>if (emergencyStop) {
+  motorOn = false;
+  armOn = false;
+} else if (boxDetected && metalDetected) {
+  motorOn = true;
+  armOn = true;
+} else {
+  motorOn = true;
+  armOn = false;
+}</pre><p><code>&&</code> means AND; both conditions must be true. The emergency stop takes priority in this simplified logic model.</p></div>
+<div class="card challenge"><h2>Predict the outputs</h2><p>Set the inputs, then predict the motor and sorting arm states.</p>
+<div class="row"><label><input type="checkbox" id="eStop"> Emergency stop</label><label><input type="checkbox" id="box"> Box detected</label><label><input type="checkbox" id="metal"> Metal detected</label></div>
+<div class="row"><label>Motor prediction <select id="predMotor"><option value="">Choose</option><option value="ON">ON</option><option value="OFF">OFF</option></select></label><label>Arm prediction <select id="predArm"><option value="">Choose</option><option value="ON">ON</option><option value="OFF">OFF</option></select></label></div>
+<button onclick="checkDecision()">Test prediction</button><div class="feedback" id="decisionFb"></div></div>
+<div class="card teach"><h2>🍎 Lecturer technique: Truth table</h2>Test all eight combinations of three Boolean inputs. Discuss why the safety condition is checked first.</div></section>
+
+<section data-title="Loops & Functions"><span class="pill">Part 5 of 8</span><h1>🔁 Loops and Functions</h1>
+<div class="grid"><div class="card"><h2>Repetition</h2><pre>for (int count = 1; count <= 5; count++) {
+  Serial.println(count);
+}</pre><p>A <code>for</code> loop repeats a known number of times. Arduino's <code>loop()</code> function is repeatedly called by the runtime.</p>
+<h2>Functions</h2><pre>bool shouldSort(bool box, bool metal) {
+  return box && metal;
+}</pre><p>Functions make code easier to read, reuse and test.</p></div>
+<div class="card challenge"><h2>Loop tracer</h2><p>Predict the output of <code>for (int i=1; i&lt;=n; i++)</code> with <code>Serial.println(i);</code>.</p><label>Value of n <input id="loopN" type="number" min="0" max="12" value="5"></label><button onclick="runLoop()">Run loop</button><div class="output" id="loopOut">Output appears here</div><p>How many lines were printed?</p><input id="loopCount" type="number"><button onclick="checkLoop()">Check</button><div class="feedback" id="loopFb"></div></div></div>
+<div class="card teach"><h2>🍎 Lecturer technique: Human loop</h2>Ask one learner to act as the counter and another as the condition checker. Stop when the condition becomes false.</div></section>
+
+<section data-title="Robot Simulator"><span class="pill">Part 6 of 8</span><h1>🏭 Program the Virtual Sorting Station</h1><p class="kicker">Change the sensor inputs and run a simulated controller scan.</p>
+<div class="grid"><div class="card"><h2>Controller inputs</h2><label><input type="checkbox" id="simEmergency"> Emergency stop active</label><label><input type="checkbox" id="simBox" checked> Box present</label><label><input type="checkbox" id="simMetal" checked> Metal detected</label><button class="good" onclick="runSim()">▶ Run controller scan</button><button class="alt" onclick="resetSim()">↺ Reset</button>
+<h2>Outputs</h2><div class="row"><span>Motor <span id="motorLamp" class="lamp"></span></span><span>Sorting arm <span id="armLamp" class="lamp"></span></span></div><p id="simState" class="feedback">Waiting for input…</p></div>
+<div class="card"><h2>Controller code</h2><pre>void controlRobot(bool stop,
+                  bool box,
+                  bool metal) {
+  if (stop) {
+    motorOn = false;
+    armOn = false;
+    return;
+  }
+  motorOn = true;
+  armOn = box && metal;
+}</pre><div class="key">Real machinery requires validated safety hardware, interlocks and risk assessment. A browser simulation is not a safety-rated controller.</div></div></div>
+<div class="card challenge"><h2>Mission</h2><p>Run three scenarios: (1) metal box, (2) non-metal box, (3) emergency stop. Observe the output changes.</p><div id="missionFb" class="feedback">Scenarios completed: 0 / 3</div></div></section>
+
+<section data-title="Debug & Test"><span class="pill">Part 7 of 8</span><h1>🐞 Debugging and Testing</h1>
+<div class="card"><h2>Find and fix the logic error</h2><pre>if (boxDetected || metalDetected) {
+  armOn = true;
+} else {
+  armOn = false;
+}</pre><p>The requirement is to sort <b>only when both</b> a box and metal are detected. The code uses the wrong operator.</p></div>
+<div class="grid"><div class="card challenge"><h2>Choose the correction</h2><label><input type="radio" name="bug" value="or"> Keep <code>||</code></label><label><input type="radio" name="bug" value="and"> Replace <code>||</code> with <code>&&</code></label><label><input type="radio" name="bug" value="not"> Replace with <code>!</code></label><button onclick="checkRadio('bug','and','bugFb')">Check correction</button><div class="feedback" id="bugFb"></div></div>
+<div class="card"><h2>Test cases</h2><table><tr><th>Box</th><th>Metal</th><th>Expected arm</th></tr><tr><td>False</td><td>False</td><td>OFF</td></tr><tr><td>True</td><td>False</td><td>OFF</td></tr><tr><td>False</td><td>True</td><td>OFF</td></tr><tr><td>True</td><td>True</td><td>ON</td></tr></table></div></div>
+<div class="card teach"><h2>🍎 Lecturer technique: Erroneous examples</h2>Let learners explain why the wrong code fails, then ask them to propose a test case that reveals the bug.</div></section>
+
+<section data-title="Assessment"><span class="pill">Part 8 of 8</span><h1>🏆 Programming Assessment and Reflection</h1>
+<div class="card challenge"><h2>Five-question knowledge check</h2><div id="quiz"></div><button class="good" onclick="gradeQuiz()">Mark my quiz</button><div class="feedback" id="quizFb"></div></div>
+<div class="card"><h2>Practical task: Conveyor sorting controller (20 marks)</h2><p>Write an Arduino-style C++ program that reads a box sensor, a metal sensor and an emergency-stop input, then controls a motor output and sorting-arm output.</p><table><tr><th>Criterion</th><th>Marks</th></tr><tr><td>Correct declarations and pin constants</td><td>4</td></tr><tr><td>Correct <code>setup()</code> and pin modes</td><td>4</td></tr><tr><td>Sensor readings and Boolean conditions</td><td>4</td></tr><tr><td>Safe output logic and emergency-stop priority</td><td>4</td></tr><tr><td>Testing, comments and debugging explanation</td><td>4</td></tr><tr><th>Total</th><th>20</th></tr></table></div>
+<div class="card"><h2>Exit ticket</h2><label>One new programming concept I learned<textarea id="reflect1"></textarea></label><label>One programming error I can now fix<textarea id="reflect2"></textarea></label><label>How I will teach this concept<textarea id="reflect3"></textarea></label><button onclick="downloadReflection()">⬇ Download reflection</button><button class="alt" onclick="downloadStarter()">⬇ Download Arduino starter sketch</button></div></section>
+<footer><button id="prev" class="alt">← Previous</button><span id="page"></span><button id="next">Next →</button></footer>
+</main>
+<script>
+const sections=[...document.querySelectorAll('main section')],nav=document.getElementById('nav');let current=0;
+sections.forEach((s,i)=>{const b=document.createElement('button');b.textContent=s.dataset.title;b.onclick=()=>show(i);nav.appendChild(b)});
+function show(i){current=Math.max(0,Math.min(sections.length-1,i));sections.forEach((s,j)=>s.classList.toggle('active',j===current));[...nav.children].forEach((b,j)=>b.classList.toggle('active',j===current));document.getElementById('bar').style.width=((current+1)/sections.length*100)+'%';document.getElementById('page').textContent=`${current+1} / ${sections.length}`;document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===sections.length-1;window.scrollTo(0,0)}
+document.getElementById('prev').onclick=()=>show(current-1);document.getElementById('next').onclick=()=>show(current+1);document.getElementById('printBtn').onclick=()=>window.print();
+function checkRadio(name,correct,target){const s=document.querySelector(`input[name="${name}"]:checked`);document.getElementById(target).textContent=!s?'Select an answer first.':s.value===correct?'✓ Correct!':'Not quite. Review the example and try again.'}
+const ipo=[['Box sensor state','Input'],['Check emergency stop','Processing'],['Motor ON/OFF','Output'],['Sorting arm ON/OFF','Output'],['Metal sensor state','Input'],['Compare sensor values','Processing']];
+document.getElementById('ipoGame').innerHTML=ipo.map((v,i)=>`<label>${v[0]} <select id="ipo${i}"><option value="">Choose</option><option>Input</option><option>Processing</option><option>Output</option></select></label>`).join('');
+function checkIPO(){let score=ipo.filter((v,i)=>document.getElementById('ipo'+i).value===v[1]).length;document.getElementById('ipoFb').textContent=`${score} / ${ipo.length} correct.`}
+function checkSyntax(){let x=document.getElementById('syntaxAns').value.toLowerCase();document.getElementById('syntaxFb').textContent=x.includes(';')||x.includes('semicolon')?'✓ Correct: a semicolon is missing after int motorPin = 9':'Hint: C++ declarations normally end with a punctuation mark.'}
+function outputs(stop,box,metal){return {motor:stop?'OFF':'ON',arm:(!stop&&box&&metal)?'ON':'OFF'}}
+function checkDecision(){let o=outputs(document.getElementById('eStop').checked,document.getElementById('box').checked,document.getElementById('metal').checked);let a=document.getElementById('predMotor').value,b=document.getElementById('predArm').value;document.getElementById('decisionFb').textContent=`Motor: ${o.motor}; Arm: ${o.arm}. ${a===o.motor&&b===o.arm?'✓ Both predictions correct!':'Compare your predictions with the result.'}`}
+let loopLines=0;function runLoop(){let n=Math.max(0,Math.min(12,Number(document.getElementById('loopN').value)||0));loopLines=n;document.getElementById('loopOut').textContent=n?Array.from({length:n},(_,i)=>i+1).join('\n'):'(No lines printed)'}function checkLoop(){document.getElementById('loopFb').textContent=Number(document.getElementById('loopCount').value)===loopLines?'✓ Correct!':`Try again: count the printed lines.`}
+let missions=new Set();function runSim(){const stop=document.getElementById('simEmergency').checked,box=document.getElementById('simBox').checked,metal=document.getElementById('simMetal').checked,o=outputs(stop,box,metal);document.getElementById('motorLamp').classList.toggle('on',o.motor==='ON');document.getElementById('armLamp').classList.toggle('on',o.arm==='ON');document.getElementById('simState').textContent=`Motor ${o.motor} | Arm ${o.arm} | ${stop?'EMERGENCY STOP':o.arm==='ON'?'METAL BOX SORTED':'NO SORTING'}`;if(stop)missions.add('stop');else if(box&&metal)missions.add('metal');else if(box&&!metal)missions.add('nonmetal');document.getElementById('missionFb').textContent=`Scenarios completed: ${missions.size} / 3${missions.size===3?' — Mission complete!':''}`}
+function resetSim(){['simEmergency','simBox','simMetal'].forEach(id=>document.getElementById(id).checked=false);document.getElementById('motorLamp').classList.remove('on');document.getElementById('armLamp').classList.remove('on');document.getElementById('simState').textContent='Waiting for input…'}
+const qs=[['Which function runs once at startup?',['loop()','setup()','digitalRead()'],1],['What does && mean?',['OR','NOT','AND'],2],['Which statement reads a digital sensor?',['digitalRead()','pinMode()','Serial.println()'],0],['Which loop is useful for a known count?',['if','for','else'],1],['What should take priority in the controller logic?',['Sorting speed','Emergency stop','Display colour'],1]];
+document.getElementById('quiz').innerHTML=qs.map((q,i)=>`<div class="light" style="margin:.5rem 0"><b>${i+1}. ${q[0]}</b>${q[1].map((v,j)=>`<label><input type="radio" name="q${i}" value="${j}"> ${v}</label>`).join('')}</div>`).join('');
+function gradeQuiz(){let score=qs.filter((q,i)=>document.querySelector(`input[name="q${i}"]:checked`)?.value===String(q[2])).length;document.getElementById('quizFb').textContent=`Score: ${score} / ${qs.length} (${score*20}%). ${score===5?'Excellent work!':'Review the sections and try again.'}`}
+function saveFile(name,content,type='text/plain'){const a=document.createElement('a');const url=URL.createObjectURL(new Blob([content],{type}));a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function downloadReflection(){saveFile('Programming_Chapter_Reflection.txt',['ROBOTICS & INDUSTRIAL AUTOMATION – PROGRAMMING REFLECTION','New concept:',document.getElementById('reflect1').value,'Error I can fix:',document.getElementById('reflect2').value,'Teaching strategy:',document.getElementById('reflect3').value].join('\n'))}
+function downloadStarter(){saveFile('sorting_controller_starter.ino',`// NC(V) Level 4 – programming practice ONLY\n// This sketch is a teaching example, not a safety-rated industrial controller.\nconst int boxPin = 2;\nconst int metalPin = 3;\nconst int stopPin = 4;\nconst int motorPin = 9;\nconst int armPin = 10;\n\nvoid setup() {\n  pinMode(boxPin, INPUT);\n  pinMode(metalPin, INPUT);\n  pinMode(stopPin, INPUT);\n  pinMode(motorPin, OUTPUT);\n  pinMode(armPin, OUTPUT);\n  digitalWrite(motorPin, LOW);\n  digitalWrite(armPin, LOW);\n}\n\nvoid loop() {\n  bool emergencyStop = digitalRead(stopPin) == HIGH;\n  bool boxDetected = digitalRead(boxPin) == HIGH;\n  bool metalDetected = digitalRead(metalPin) == HIGH;\n  // TODO: Stop outputs when emergencyStop is true.\n  // TODO: Otherwise enable the motor.\n  // TODO: Enable the sorting arm only when BOTH sensors are HIGH.\n}\n`)}
+show(0);
+</script></body></html>
