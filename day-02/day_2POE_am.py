@@ -41,9 +41,9 @@ def display(name, final_amount):
 # Function 4: Process payment
 def process_payment():
 
-    name = input("Enter customer name: ")
+    name = input("Enter customer name:, ")
 
-    facility_code = input("Enter facility code: ")
+    facility_code = input("Enter facility code: squa, swim, gym, wei ")
 
     hours = float(input("Enter number of hours: "))
 
