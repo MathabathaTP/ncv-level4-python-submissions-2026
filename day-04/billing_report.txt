@@ -1,0 +1,233 @@
+COMMUNITY WATER CONSUMPTION AND BILLING REPORT
+===============================================================================================
+Meter     Household              Area                Previous   Current  Usage kL Category      Bill R
+--------------------------------------------------------------------------------------------------------------
+M001      Lerato Molefe          Soshanguve           3173.00   3178.00      5.00 LOW             0.00
+M002      Nomsa Mabena           Atteridgeville       3614.00   3680.00     66.00 HIGH          671.00
+M003      Peter Mthembu          Ga-Rankuwa            894.00    959.00     65.00 HIGH          659.00
+M004      Ayanda Dlamini         Hammanskraal         1217.00   1267.00     50.00 MODERATE      479.00
+M005      Sipho Mahlangu         Mamelodi             1822.00   1889.00     67.00 HIGH          683.00
+M006      Naledi Masemola        Soshanguve           1585.00   1659.00     74.00 HIGH          767.00
+M007      Kabelo Nkosi           Atteridgeville       1007.00   1083.00     76.00 HIGH          791.00
+M008      Palesa Maseko          Ga-Rankuwa           1469.00   1482.00     13.00 LOW            59.50
+M009      Tshepo Ndlovu          Hammanskraal         1466.00   1518.00     52.00 HIGH          503.00
+M010      Thabo Mokoena          Mamelodi             1740.00   1774.00     34.00 MODERATE      287.00
+M011      Lerato Molefe          Soshanguve           3818.00   3831.00     13.00 LOW            59.50
+M012      Nomsa Mabena           Atteridgeville       3567.00   3608.00     41.00 MODERATE      371.00
+M013      Peter Mthembu          Ga-Rankuwa           1674.00   1676.00      2.00 LOW             0.00
+M014      Ayanda Dlamini         Hammanskraal         2731.00   2810.00     79.00 HIGH          827.00
+M015      Sipho Mahlangu         Mamelodi             1225.00   1234.00      9.00 LOW            25.50
+M016      Naledi Masemola        Soshanguve           1229.00   1243.00     14.00 LOW            68.00
+M017      Kabelo Nkosi           Atteridgeville       2621.00   2679.00     58.00 HIGH          575.00
+M018      Palesa Maseko          Ga-Rankuwa           1991.00   2084.00     93.00 HIGH          995.00
+M019      Tshepo Ndlovu          Hammanskraal          701.00    713.00     12.00 LOW            51.00
+M020      Thabo Mokoena          Mamelodi             2097.00   2099.00      2.00 LOW             0.00
+M021      Lerato Molefe          Soshanguve            806.00    880.00     74.00 HIGH          767.00
+M022      Nomsa Mabena           Atteridgeville       3381.00   3435.00     54.00 HIGH          527.00
+M023      Peter Mthembu          Ga-Rankuwa           3495.00   3545.00     50.00 MODERATE      479.00
+M024      Ayanda Dlamini         Hammanskraal         2203.00   2287.00     84.00 HIGH          887.00
+M025      Sipho Mahlangu         Mamelodi             1624.00   1697.00     73.00 HIGH          755.00
+M026      Naledi Masemola        Soshanguve           2457.00   2477.00     20.00 LOW           119.00
+M027      Kabelo Nkosi           Atteridgeville       3643.00   3724.00     81.00 HIGH          851.00
+M028      Palesa Maseko          Ga-Rankuwa           2064.00   2093.00     29.00 MODERATE      227.00
+M029      Tshepo Ndlovu          Hammanskraal         3573.00   3642.00     69.00 HIGH          707.00
+M030      Thabo Mokoena          Mamelodi             2761.00   2854.00     93.00 HIGH          995.00
+M031      Lerato Molefe          Soshanguve            841.00    867.00     26.00 MODERATE      191.00
+M032      Nomsa Mabena           Atteridgeville       1998.00   2022.00     24.00 MODERATE      167.00
+M033      Peter Mthembu          Ga-Rankuwa            967.00    984.00     17.00 LOW            93.50
+M034      Ayanda Dlamini         Hammanskraal         2965.00   3028.00     63.00 HIGH          635.00
+M035      Sipho Mahlangu         Mamelodi              828.00    898.00     70.00 HIGH          719.00
+M036      Naledi Masemola        Soshanguve           3289.00   3347.00     58.00 HIGH          575.00
+M037      Kabelo Nkosi           Atteridgeville        428.00    486.00     58.00 HIGH          575.00
+M038      Palesa Maseko          Ga-Rankuwa           2365.00   2441.00     76.00 HIGH          791.00
+M039      Tshepo Ndlovu          Hammanskraal          890.00    956.00     66.00 HIGH          671.00
+M040      Thabo Mokoena          Mamelodi             2366.00   2430.00     64.00 HIGH          647.00
+M041      Lerato Molefe          Soshanguve           2423.00   2470.00     47.00 MODERATE      443.00
+M042      Nomsa Mabena           Atteridgeville       2154.00   2223.00     69.00 HIGH          707.00
+M043      Peter Mthembu          Ga-Rankuwa           3947.00   3970.00     23.00 MODERATE      155.00
+M044      Ayanda Dlamini         Hammanskraal          411.00    442.00     31.00 MODERATE      251.00
+M045      Sipho Mahlangu         Mamelodi              774.00    777.00      3.00 LOW             0.00
+M046      Naledi Masemola        Soshanguve           2308.00   2356.00     48.00 MODERATE      455.00
+M047      Kabelo Nkosi           Atteridgeville       2250.00   2264.00     14.00 LOW            68.00
+M048      Palesa Maseko          Ga-Rankuwa           3168.00   3258.00     90.00 HIGH          959.00
+M049      Tshepo Ndlovu          Hammanskraal         3072.00   3105.00     33.00 MODERATE      275.00
+M050      Thabo Mokoena          Mamelodi              925.00    985.00     60.00 HIGH          599.00
+M051      Lerato Molefe          Soshanguve           1562.00   1619.00     57.00 HIGH          563.00
+M052      Nomsa Mabena           Atteridgeville       2052.00   2089.00     37.00 MODERATE      323.00
+M053      Peter Mthembu          Ga-Rankuwa           3412.00   3433.00     21.00 MODERATE      131.00
+M054      Ayanda Dlamini         Hammanskraal         2288.00   2344.00     56.00 HIGH          551.00
+M055      Sipho Mahlangu         Mamelodi             1633.00   1672.00     39.00 MODERATE      347.00
+M056      Naledi Masemola        Soshanguve           3174.00   3179.00      5.00 LOW             0.00
+M057      Kabelo Nkosi           Atteridgeville        716.00    742.00     26.00 MODERATE      191.00
+M058      Palesa Maseko          Ga-Rankuwa           1674.00   1761.00     87.00 HIGH          923.00
+M059      Tshepo Ndlovu          Hammanskraal         3480.00   3533.00     53.00 HIGH          515.00
+M060      Thabo Mokoena          Mamelodi              814.00    873.00     59.00 HIGH          587.00
+M061      Lerato Molefe          Soshanguve            672.00    731.00     59.00 HIGH          587.00
+M062      Nomsa Mabena           Atteridgeville       2471.00   2528.00     57.00 HIGH          563.00
+M063      Peter Mthembu          Ga-Rankuwa           3088.00   3090.00      2.00 LOW             0.00
+M064      Ayanda Dlamini         Hammanskraal         1117.00   1172.00     55.00 HIGH          539.00
+M065      Sipho Mahlangu         Mamelodi             3058.00   3093.00     35.00 MODERATE      299.00
+M066      Naledi Masemola        Soshanguve            708.00    718.00     10.00 LOW            34.00
+M067      Kabelo Nkosi           Atteridgeville        917.00    938.00     21.00 MODERATE      131.00
+M068      Palesa Maseko          Ga-Rankuwa           2161.00   2197.00     36.00 MODERATE      311.00
+M069      Tshepo Ndlovu          Hammanskraal         2312.00   2326.00     14.00 LOW            68.00
+M070      Thabo Mokoena          Mamelodi             1230.00   1309.00     79.00 HIGH          827.00
+M071      Lerato Molefe          Soshanguve           2323.00   2410.00     87.00 HIGH          923.00
+M072      Nomsa Mabena           Atteridgeville       3721.00   3729.00      8.00 LOW            17.00
+M073      Peter Mthembu          Ga-Rankuwa           2156.00   2239.00     83.00 HIGH          875.00
+M074      Ayanda Dlamini         Hammanskraal         2996.00   3015.00     19.00 LOW           110.50
+M075      Sipho Mahlangu         Mamelodi              435.00    484.00     49.00 MODERATE      467.00
+M076      Naledi Masemola        Soshanguve           2942.00   3025.00     83.00 HIGH          875.00
+M077      Kabelo Nkosi           Atteridgeville       1586.00   1667.00     81.00 HIGH          851.00
+M078      Palesa Maseko          Ga-Rankuwa            561.00    633.00     72.00 HIGH          743.00
+M079      Tshepo Ndlovu          Hammanskraal         2635.00   2710.00     75.00 HIGH          779.00
+M080      Thabo Mokoena          Mamelodi             1860.00   1892.00     32.00 MODERATE      263.00
+M081      Lerato Molefe          Soshanguve           1262.00   1295.00     33.00 MODERATE      275.00
+M082      Nomsa Mabena           Atteridgeville       2485.00   2525.00     40.00 MODERATE      359.00
+M083      Peter Mthembu          Ga-Rankuwa            652.00    655.00      3.00 LOW             0.00
+M084      Ayanda Dlamini         Hammanskraal         3572.00   3607.00     35.00 MODERATE      299.00
+M085      Sipho Mahlangu         Mamelodi             3077.00   3103.00     26.00 MODERATE      191.00
+M086      Naledi Masemola        Soshanguve            662.00    687.00     25.00 MODERATE      179.00
+M087      Kabelo Nkosi           Atteridgeville       1603.00   1670.00     67.00 HIGH          683.00
+M088      Palesa Maseko          Ga-Rankuwa           2308.00   2372.00     64.00 HIGH          647.00
+M089      Tshepo Ndlovu          Hammanskraal          956.00    997.00     41.00 MODERATE      371.00
+M090      Thabo Mokoena          Mamelodi             3693.00   3758.00     65.00 HIGH          659.00
+M091      Lerato Molefe          Soshanguve           3691.00   3724.00     33.00 MODERATE      275.00
+M092      Nomsa Mabena           Atteridgeville       2702.00   2793.00     91.00 HIGH          971.00
+M093      Peter Mthembu          Ga-Rankuwa           3369.00   3463.00     94.00 HIGH         1007.00
+M094      Ayanda Dlamini         Hammanskraal         1653.00   1735.00     82.00 HIGH          863.00
+M095      Sipho Mahlangu         Mamelodi             3455.00   3542.00     87.00 HIGH          923.00
+M096      Naledi Masemola        Soshanguve           2565.00   2601.00     36.00 MODERATE      311.00
+M097      Kabelo Nkosi           Atteridgeville       3045.00   3109.00     64.00 HIGH          647.00
+M098      Palesa Maseko          Ga-Rankuwa           2731.00   2785.00     54.00 HIGH          527.00
+M099      Tshepo Ndlovu          Hammanskraal         3783.00   3844.00     61.00 HIGH          611.00
+M100      Thabo Mokoena          Mamelodi              655.00    683.00     28.00 MODERATE      215.00
+M101      Lerato Molefe          Soshanguve           1032.00   1037.00      5.00 LOW             0.00
+M102      Nomsa Mabena           Atteridgeville       2277.00   2291.00     14.00 LOW            68.00
+M103      Peter Mthembu          Ga-Rankuwa           2501.00   2576.00     75.00 HIGH          779.00
+M104      Ayanda Dlamini         Hammanskraal         3957.00   3969.00     12.00 LOW            51.00
+M105      Sipho Mahlangu         Mamelodi             1467.00   1558.00     91.00 HIGH          971.00
+M106      Naledi Masemola        Soshanguve           2312.00   2401.00     89.00 HIGH          947.00
+M107      Kabelo Nkosi           Atteridgeville       1953.00   2040.00     87.00 HIGH          923.00
+M108      Palesa Maseko          Ga-Rankuwa           1728.00   1770.00     42.00 MODERATE      383.00
+M109      Tshepo Ndlovu          Hammanskraal         1913.00   1936.00     23.00 MODERATE      155.00
+M110      Thabo Mokoena          Mamelodi             2223.00   2265.00     42.00 MODERATE      383.00
+M111      Lerato Molefe          Soshanguve           3349.00   3361.00     12.00 LOW            51.00
+M112      Nomsa Mabena           Atteridgeville       3004.00   3089.00     85.00 HIGH          899.00
+M113      Peter Mthembu          Ga-Rankuwa           3100.00   3167.00     67.00 HIGH          683.00
+M114      Ayanda Dlamini         Hammanskraal         2242.00   2294.00     52.00 HIGH          503.00
+M115      Sipho Mahlangu         Mamelodi             2928.00   2933.00      5.00 LOW             0.00
+M116      Naledi Masemola        Soshanguve           3970.00   4016.00     46.00 MODERATE      431.00
+M117      Kabelo Nkosi           Atteridgeville        783.00    823.00     40.00 MODERATE      359.00
+M118      Palesa Maseko          Ga-Rankuwa           2189.00   2235.00     46.00 MODERATE      431.00
+M119      Tshepo Ndlovu          Hammanskraal         2275.00   2350.00     75.00 HIGH          779.00
+M120      Thabo Mokoena          Mamelodi             3394.00   3440.00     46.00 MODERATE      431.00
+M121      Lerato Molefe          Soshanguve            584.00    621.00     37.00 MODERATE      323.00
+M122      Nomsa Mabena           Atteridgeville       1473.00   1508.00     35.00 MODERATE      299.00
+M123      Peter Mthembu          Ga-Rankuwa            761.00    789.00     28.00 MODERATE      215.00
+M124      Ayanda Dlamini         Hammanskraal         2005.00   2009.00      4.00 LOW             0.00
+M125      Sipho Mahlangu         Mamelodi             1097.00   1118.00     21.00 MODERATE      131.00
+M126      Naledi Masemola        Soshanguve           2324.00   2408.00     84.00 HIGH          887.00
+M127      Kabelo Nkosi           Atteridgeville       3328.00   3398.00     70.00 HIGH          719.00
+M128      Palesa Maseko          Ga-Rankuwa            837.00    927.00     90.00 HIGH          959.00
+M129      Tshepo Ndlovu          Hammanskraal         2843.00   2908.00     65.00 HIGH          659.00
+M130      Thabo Mokoena          Mamelodi              772.00    776.00      4.00 LOW             0.00
+M131      Lerato Molefe          Soshanguve           2806.00   2861.00     55.00 HIGH          539.00
+M132      Nomsa Mabena           Atteridgeville        591.00    682.00     91.00 HIGH          971.00
+M133      Peter Mthembu          Ga-Rankuwa           3195.00   3212.00     17.00 LOW            93.50
+M134      Ayanda Dlamini         Hammanskraal         2911.00   2952.00     41.00 MODERATE      371.00
+M135      Sipho Mahlangu         Mamelodi             1404.00   1473.00     69.00 HIGH          707.00
+M136      Naledi Masemola        Soshanguve           3392.00   3461.00     69.00 HIGH          707.00
+M137      Kabelo Nkosi           Atteridgeville       3823.00   3827.00      4.00 LOW             0.00
+M138      Palesa Maseko          Ga-Rankuwa           1535.00   1559.00     24.00 MODERATE      167.00
+M139      Tshepo Ndlovu          Hammanskraal         1007.00   1038.00     31.00 MODERATE      251.00
+M140      Thabo Mokoena          Mamelodi             1584.00   1599.00     15.00 LOW            76.50
+M141      Lerato Molefe          Soshanguve           2814.00   2870.00     56.00 HIGH          551.00
+M142      Nomsa Mabena           Atteridgeville        925.00    934.00      9.00 LOW            25.50
+M143      Peter Mthembu          Ga-Rankuwa           3245.00   3302.00     57.00 HIGH          563.00
+M144      Ayanda Dlamini         Hammanskraal         1672.00   1742.00     70.00 HIGH          719.00
+M145      Sipho Mahlangu         Mamelodi             2061.00   2135.00     74.00 HIGH          767.00
+M146      Naledi Masemola        Soshanguve           1320.00   1365.00     45.00 MODERATE      419.00
+M147      Kabelo Nkosi           Atteridgeville       3426.00   3439.00     13.00 LOW            59.50
+M148      Palesa Maseko          Ga-Rankuwa           3172.00   3202.00     30.00 MODERATE      239.00
+M149      Tshepo Ndlovu          Hammanskraal         1458.00   1475.00     17.00 LOW            93.50
+M150      Thabo Mokoena          Mamelodi             1818.00   1876.00     58.00 HIGH          575.00
+M151      Lerato Molefe          Soshanguve           2689.00   2717.00     28.00 MODERATE      215.00
+M152      Nomsa Mabena           Atteridgeville       2673.00   2730.00     57.00 HIGH          563.00
+M153      Peter Mthembu          Ga-Rankuwa           1645.00   1652.00      7.00 LOW             8.50
+M154      Ayanda Dlamini         Hammanskraal         2789.00   2845.00     56.00 HIGH          551.00
+M155      Sipho Mahlangu         Mamelodi              905.00    929.00     24.00 MODERATE      167.00
+M156      Naledi Masemola        Soshanguve           2917.00   2925.00      8.00 LOW            17.00
+M157      Kabelo Nkosi           Atteridgeville       2420.00   2436.00     16.00 LOW            85.00
+M158      Palesa Maseko          Ga-Rankuwa           1983.00   2049.00     66.00 HIGH          671.00
+M159      Tshepo Ndlovu          Hammanskraal         1550.00   1612.00     62.00 HIGH          623.00
+M160      Thabo Mokoena          Mamelodi             1834.00   1891.00     57.00 HIGH          563.00
+M161      Lerato Molefe          Soshanguve            603.00    670.00     67.00 HIGH          683.00
+M162      Nomsa Mabena           Atteridgeville       2143.00   2146.00      3.00 LOW             0.00
+M163      Peter Mthembu          Ga-Rankuwa           2760.00   2788.00     28.00 MODERATE      215.00
+M164      Ayanda Dlamini         Hammanskraal         3108.00   3147.00     39.00 MODERATE      347.00
+M165      Sipho Mahlangu         Mamelodi             2680.00   2711.00     31.00 MODERATE      251.00
+M166      Naledi Masemola        Soshanguve            821.00    872.00     51.00 HIGH          491.00
+M167      Kabelo Nkosi           Atteridgeville       2108.00   2189.00     81.00 HIGH          851.00
+M168      Palesa Maseko          Ga-Rankuwa            958.00   1046.00     88.00 HIGH          935.00
+M169      Tshepo Ndlovu          Hammanskraal         2587.00   2616.00     29.00 MODERATE      227.00
+M170      Thabo Mokoena          Mamelodi             1039.00   1097.00     58.00 HIGH          575.00
+M171      Lerato Molefe          Soshanguve           1162.00   1253.00     91.00 HIGH          971.00
+M172      Nomsa Mabena           Atteridgeville       2890.00   2951.00     61.00 HIGH          611.00
+M173      Peter Mthembu          Ga-Rankuwa            752.00    787.00     35.00 MODERATE      299.00
+M174      Ayanda Dlamini         Hammanskraal         3499.00   3550.00     51.00 HIGH          491.00
+M175      Sipho Mahlangu         Mamelodi             2197.00   2272.00     75.00 HIGH          779.00
+M176      Naledi Masemola        Soshanguve            663.00    736.00     73.00 HIGH          755.00
+M177      Kabelo Nkosi           Atteridgeville       3160.00   3160.00      0.00 LOW             0.00
+M178      Palesa Maseko          Ga-Rankuwa           3424.00   3454.00     30.00 MODERATE      239.00
+M179      Tshepo Ndlovu          Hammanskraal         3846.00   3856.00     10.00 LOW            34.00
+M180      Thabo Mokoena          Mamelodi             1511.00   1542.00     31.00 MODERATE      251.00
+M181      Lerato Molefe          Soshanguve           2391.00   2411.00     20.00 LOW           119.00
+M182      Nomsa Mabena           Atteridgeville       3436.00   3502.00     66.00 HIGH          671.00
+M183      Peter Mthembu          Ga-Rankuwa           2025.00   2058.00     33.00 MODERATE      275.00
+M184      Ayanda Dlamini         Hammanskraal         2303.00   2357.00     54.00 HIGH          527.00
+M185      Sipho Mahlangu         Mamelodi             3694.00   3696.00      2.00 LOW             0.00
+M186      Naledi Masemola        Soshanguve            971.00    983.00     12.00 LOW            51.00
+M187      Kabelo Nkosi           Atteridgeville       1107.00   1161.00     54.00 HIGH          527.00
+M188      Palesa Maseko          Ga-Rankuwa           3709.00   3711.00      2.00 LOW             0.00
+M189      Tshepo Ndlovu          Hammanskraal         1501.00   1579.00     78.00 HIGH          815.00
+M190      Thabo Mokoena          Mamelodi             3612.00   3674.00     62.00 HIGH          623.00
+M191      Lerato Molefe          Soshanguve           2850.00   2892.00     42.00 MODERATE      383.00
+M192      Nomsa Mabena           Atteridgeville       1420.00   1459.00     39.00 MODERATE      347.00
+M193      Peter Mthembu          Ga-Rankuwa           1138.00   1147.00      9.00 LOW            25.50
+M194      Ayanda Dlamini         Hammanskraal         2629.00   2667.00     38.00 MODERATE      335.00
+M195      Sipho Mahlangu         Mamelodi              506.00    521.00     15.00 LOW            76.50
+M196      Naledi Masemola        Soshanguve            696.00    702.00      6.00 LOW             0.00
+M197      Kabelo Nkosi           Atteridgeville       3133.00   3144.00     11.00 LOW            42.50
+M198      Palesa Maseko          Ga-Rankuwa           2587.00   2645.00     58.00 HIGH          575.00
+M199      Tshepo Ndlovu          Hammanskraal          658.00    662.00      4.00 LOW             0.00
+M200      Thabo Mokoena          Mamelodi              783.00    831.00     48.00 MODERATE      455.00
+M201      Lerato Molefe          Soshanguve           3219.00   3281.00     62.00 HIGH          623.00
+M202      Nomsa Mabena           Atteridgeville       1671.00   1718.00     47.00 MODERATE      443.00
+M203      Peter Mthembu          Ga-Rankuwa           1778.00   1813.00     35.00 MODERATE      299.00
+M204      Ayanda Dlamini         Hammanskraal         1008.00   1023.00     15.00 LOW            76.50
+M205      Sipho Mahlangu         Mamelodi             2894.00   2901.00      7.00 LOW             8.50
+M206      Naledi Masemola        Soshanguve            578.00    624.00     46.00 MODERATE      431.00
+M207      Kabelo Nkosi           Atteridgeville       1136.00   1150.00     14.00 LOW            68.00
+M208      Palesa Maseko          Ga-Rankuwa           3020.00   3063.00     43.00 MODERATE      395.00
+M209      Tshepo Ndlovu          Hammanskraal         2402.00   2447.00     45.00 MODERATE      419.00
+M210      Thabo Mokoena          Mamelodi             1432.00   1523.00     91.00 HIGH          971.00
+
+TOP FIVE WATER CONSUMERS
+-------------------------------------------------------
+1. M093 | Peter Mthembu | 94.00 kL
+2. M018 | Palesa Maseko | 93.00 kL
+3. M030 | Thabo Mokoena | 93.00 kL
+4. M092 | Nomsa Mabena | 91.00 kL
+5. M105 | Sipho Mahlangu | 91.00 kL
+
+SUMMARY
+-------------------------------------------------------
+Input lines processed: 220
+Accepted records: 210
+Rejected records: 10
+Total consumption: 9426.00 kL
+Total billed: R89932.00
+LOW households: 50
+MODERATE households: 65
+HIGH households: 95

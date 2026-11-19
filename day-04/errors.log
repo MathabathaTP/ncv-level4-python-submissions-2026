@@ -1,0 +1,10 @@
+Line 211: 'M001,Duplicate Meter,900,930,Mamelodi' | REJECTED: duplicate meter number
+Line 212: 'M211,Missing Reading,,950,Soshanguve' | REJECTED: missing required field
+Line 213: 'M212,Negative Reading,-10,20,Mamelodi' | REJECTED: negative reading
+Line 214: 'M213,Reversed Reading,1200,1100,Ga-Rankuwa' | REJECTED: current reading below previous reading
+Line 215: 'M214,Invalid Reading,abc,1230,Atteridgeville' | REJECTED: non-numeric reading
+Line 216: 'M215,Missing Area,900,950,' | REJECTED: missing required field
+Line 217: 'M216,Too,Few,Fields' | REJECTED: expected exactly 5 comma-separated fields
+Line 218: 'M217,Extra,100,120,Mamelodi,EXTRA' | REJECTED: expected exactly 5 comma-separated fields
+Line 219: 'M218,,100,150,Soshanguve' | REJECTED: missing required field
+Line 220: 'M219, ,100,130,Mamelodi' | REJECTED: missing required field
